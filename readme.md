@@ -6,6 +6,11 @@ Plugin Wordpress para administrar eventos de una manera sencilla.
 
 Instalar como un plugin normal y aparecerá en el menu el item para acceder a crear sus eventos.
 
+### Requisitos
+
+* Requiere [WPBakery Page Builder](https://wpbakery.com/) o similar para la vista.
+* Requiere [CMB2](https://es.wordpress.org/plugins/cmb2/) para los custom fields.
+
 ### Custom query en WPBakery Page Builder
 
 A continuación una *custom query* de ejemplo.
@@ -22,11 +27,6 @@ La siguiente query devuelve todos los posts que cumplan con las siguientes condi
 *   Qué éstos esten ordenados de manera ascendete, por un *custom meta field*
 
 Para más información sobre Custom Query, visitar la documentacion oficial de [query_post](https://developer.wordpress.org/reference/functions/query_posts/)
-
-### Requisitos
-
-* Requiere [WPBakery Page Builder](https://wpbakery.com/) o similar para la vista.
-* Requiere [CMB2](https://es.wordpress.org/plugins/cmb2/) para los custom fields.
 
 ## Autor
 
