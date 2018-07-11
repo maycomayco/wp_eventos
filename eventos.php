@@ -87,7 +87,8 @@ function cmb2_eventos_metaboxes() {
 	$cmb->add_field( array(
 		'name' => __( 'Fecha del evento', 'knx-eventos' ),
 		'id'   => $prefix . 'fecha_evento',
-		'type' => 'text_date_timestamp'
+		'type' => 'text_date_timestamp',
+		'desc' => esc_html__( 'Fecha hasta la cual sera valido el evento.', 'cmb2' ),
 	) );
 }
 
