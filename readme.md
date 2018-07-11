@@ -8,8 +8,8 @@ Instalar como un plugin normal y aparecerá en el menu el item para acceder a cr
 
 ### Requisitos
 
-Requiere [WPBakery Page Builder](https://wpbakery.com/) o similar para la vista.
-Requiere [CMB2](https://es.wordpress.org/plugins/cmb2/) para los custom fields.
+* Requiere [WPBakery Page Builder](https://wpbakery.com/) o similar para la vista.
+* Requiere [CMB2](https://es.wordpress.org/plugins/cmb2/) para los custom fields.
 
 ## Autor
 
