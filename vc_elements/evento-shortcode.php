@@ -72,36 +72,30 @@ class vcEventos extends WPBakeryShortCode {
 			}
 		}
 		// WP_Query arguments
-		$args = array(
-			'post_type'              => array( 'event' ),
-			'post_status'            => array( 'publish' ),
-			'posts_per_page'         => $event_posts_pro,
-			'meta_query'             => array(
-				array(
-					'key'     => 'wpcf-fecha-de-vencimiento',	//esto registra la hora tambien.
-					'value'   => date( "U" ),
-					'compare' => '>',	//la comparacion es por el dia directamente.
-				),
-			),
-		);
+		// $args = array(
+		// 	'post_type'              => array( 'event' ),
+		// 	'post_status'            => array( 'publish' ),
+		// 	'posts_per_page'         => $event_posts_pro,
+		// 	'meta_query'             => array(
+		// 		array(
+		// 			'key'     => 'wpcf-fecha-de-vencimiento',	//esto registra la hora tambien.
+		// 			'value'   => date( "U" ),
+		// 			'compare' => '>',	//la comparacion es por el dia directamente.
+		// 		),
+		// 	),
+		// );
 		// The Query
-		$carousel_query = new WP_Query(
+		$carousel_query  = new WP_Query(
 			array(
-				'post_type'              => 'event',
-				'post_status'            => 'publish',
-				'posts_per_page'         => $event_posts_pro,
-		        'orderby' => 'menu_order _knx-evento_fecha_evento title',	// 3 tipos de orden admite order, fecha y titulo
-		        'order' => 'ASC',
-		        'meta_key'     => '_knx-evento_fecha_evento',	// field por el cual ordenamos
-              	'meta_value'   => date( "U" ), // fecha formato UNIX
-              	'meta_compare' => '>',
-				// 'meta_query'             => array(
-				// 	array(
-				// 		'key'     => 'wpcf-fecha-de-vencimiento',	//esto registra la hora tambien.
-				// 		'value'   => date( "U" ),
-				// 		'compare' => '>',	//la comparacion es por el dia directamente.
-				// 	),
-				),
+				'post_type'      => 'evento',
+				// 'post_status'    => 'publish',
+				'posts_per_page' => $event_posts_pro,
+				'orderby'        => 'menu_order _knx-evento_fecha_evento title',	// 3 tipos de orden admite order, fecha y titulo
+				'order'          => 'ASC',
+				'meta_key'       => '_knx-evento_fecha_evento',	// field por el cual ordenamos
+				'meta_value'     => date( "U" ), // fecha formato UNIX
+				'meta_compare'   => '>',
+			)
 		);
 		// comienzo HTML
 		$count = 1; 
@@ -118,7 +112,7 @@ class vcEventos extends WPBakeryShortCode {
 		ob_start();	?>
 		
 		<div class="knx_list">
-			<?php // Esto hay que hacerlo general, porque esta vista funciona solo para el template de Ovalle
+			<?php 
 			$count = 1;
 			$col_count_progression = $grid_columns;
 			while ($carousel_query->have_posts()) : $carousel_query->the_post(); ?>

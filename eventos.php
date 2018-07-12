@@ -64,6 +64,7 @@ if ( ! function_exists('knx_setup_eventos') ) {
 			'capability_type'       => 'page',
 		);
 		register_post_type( 'evento', $args );
+		add_image_size( 'knx_3x2', 500, 333, array( 'center', 'center' ) );
 	}
 	add_action( 'init', 'knx_setup_eventos', 0 );
 }
@@ -100,5 +101,4 @@ if( function_exists( 'vc_manager' ) ) {
     // Require new custom Element
     require_once( plugin_dir_path( __FILE__ ) . 'vc_elements/evento-shortcode.php' );
 	}
-
 }
