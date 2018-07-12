@@ -12,9 +12,9 @@ License: GPLv2 o posterior
 
 /*	Registro CP */
 
-if ( ! function_exists('knx_eventos') ) {
+if ( ! function_exists('knx_setup_eventos') ) {
 	// Register Custom Post Type
-	function knx_eventos() {
+	function knx_setup_eventos() {
 		$labels = array(
 			'name'                  => _x( 'Eventos', 'Post Type General Name', 'knx-eventos' ),
 			'singular_name'         => _x( 'Evento', 'Post Type Singular Name', 'knx-eventos' ),
@@ -48,7 +48,7 @@ if ( ! function_exists('knx_eventos') ) {
 			'label'                 => __( 'Evento', 'knx-eventos' ),
 			'description'           => __( 'Para administrar eventos', 'knx-eventos' ),
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', ),
+			'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'page-attributes' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
@@ -65,11 +65,11 @@ if ( ! function_exists('knx_eventos') ) {
 		);
 		register_post_type( 'evento', $args );
 	}
-	add_action( 'init', 'knx_eventos', 0 );
+	add_action( 'init', 'knx_setup_eventos', 0 );
 }
 
 /*	Agregamos metabox al CP */
-add_action( 'cmb2_admin_init', 'cmb2_promocion_metaboxes' );
+add_action( 'cmb2_admin_init', 'cmb2_eventos_metaboxes' );
 /** Define the metabox and field configurations. */
 function cmb2_eventos_metaboxes() {
 	// Start with an underscore to hide fields from custom fields list
