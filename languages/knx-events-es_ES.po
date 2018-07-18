@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KNX - Events\n"
-"POT-Creation-Date: 2018-07-18 14:25-0300\n"
-"PO-Revision-Date: 2018-07-18 14:25-0300\n"
+"POT-Creation-Date: 2018-07-18 15:37-0300\n"
+"PO-Revision-Date: 2018-07-18 15:38-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -140,12 +140,24 @@ msgid "Event information"
 msgstr "Información del evento"
 
 #: events.php:89
-msgid "End date "
-msgstr "Fecha de finalización "
+msgid "End date"
+msgstr "Fecha de finalización"
 
 #: events.php:92
 msgid "End date for the event."
 msgstr "Fecha de fin del evento."
+
+#: events.php:115
+msgid "Title"
+msgstr "Titulo"
+
+#: events.php:116
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#: events.php:117
+msgid "Date"
+msgstr "Fecha"
 
 #: vc_elements/evento-shortcode.php:23
 msgid "KNX Events"

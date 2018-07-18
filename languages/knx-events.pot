@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: KNX - Events\n"
-"POT-Creation-Date: 2018-07-18 14:25-0300\n"
+"POT-Creation-Date: 2018-07-18 15:36-0300\n"
 "PO-Revision-Date: 2018-07-18 14:02-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -140,11 +140,23 @@ msgid "Event information"
 msgstr ""
 
 #: events.php:89
-msgid "End date "
+msgid "End date"
 msgstr ""
 
 #: events.php:92
 msgid "End date for the event."
+msgstr ""
+
+#: events.php:115
+msgid "Title"
+msgstr ""
+
+#: events.php:116
+msgid "End Date"
+msgstr ""
+
+#: events.php:117
+msgid "Date"
 msgstr ""
 
 #: vc_elements/evento-shortcode.php:23

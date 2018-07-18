@@ -86,14 +86,60 @@ function cmb2_eventos_metaboxes() {
 	) );
 	// vencimiento field
 	$cmb->add_field( array(
-		'name' => __( 'End date ', 'knx-events' ),
+		'name' => __( 'End date', 'knx-events' ),
 		'id'   => $prefix . 'fecha_evento',
 		'type' => 'text_date_timestamp',
 		'desc' => __( 'End date for the event.', 'knx-events' ),
 	) );
 }
 
-/*	Registramos modulo a Visual Composer - DEPRECATED*/ 
+// Add the custom columns to the evento post type: redefined array of columns
+// Mantenemos el nombre EVENTO, porque el Custom Post ya estaba registrado 
+add_filter( 'manage_evento_posts_columns', 'evento_columns' );
+function evento_columns( $columns ) {
+    $columns = array(
+      'cb' => $columns['cb'],
+      'title' => __( 'Title' ),
+      'end_date' => __( 'End Date', 'knx-events' ),
+      'date' => __( 'Date'),
+    ); 
+  return $columns;
+}
+
+// Add the data to the custom columns for the book post type:
+add_action( 'manage_evento_posts_custom_column' , 'custom_evento_column', 10, 2 );
+function custom_evento_column( $column, $post_id ) {
+  switch ( $column ) {
+	  case 'end_date' :
+      $terms = get_post_meta( $post_id, '_knx-evento_fecha_evento', true );
+      echo gmdate('d/m/Y', $terms);
+    break;
+  }
+}
+
+// Make Column 'End Date' Sortable, add column to sortable columns array
+add_filter( 'manage_edit-evento_sortable_columns', 'evento_sortable_column');
+function evento_sortable_column( $columns ) {
+  $columns['end_date'] = '_knx-evento_fecha_evento';
+  return $columns;
+}
+
+// Make query to order by '_knx-evento_fecha_evento', type of column set to 'text_date_timestamp'
+add_action( 'pre_get_posts', 'end_date_posts_orderby' );
+function end_date_posts_orderby( $query ) {
+  if( ! is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  if ( '_knx-evento_fecha_evento' === $query->get( 'orderby') ) {
+    $query->set( 'orderby', 'meta_value' );
+    $query->set( 'meta_key', '_knx-evento_fecha_evento' );
+    $query->set( 'meta_type', 'text_date_timestamp' );
+  }
+}
+
+
+
+/*	Registramos modulo a Visual Composer */ 
 if( function_exists( 'vc_manager' ) ) {
 	// Before VC Init
 	add_action( 'vc_before_init', 'knx_html_eventos' );
@@ -102,3 +148,4 @@ if( function_exists( 'vc_manager' ) ) {
     require_once( plugin_dir_path( __FILE__ ) . 'vc_elements/evento-shortcode.php' );
 	}
 }
+
