@@ -1,0 +1,211 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: KNX - Events\n"
+"POT-Creation-Date: 2018-07-18 14:25-0300\n"
+"PO-Revision-Date: 2018-07-18 14:25-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: events.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: events.php:20
+msgctxt "Post Type General Name"
+msgid "Events"
+msgstr "Eventos"
+
+#: events.php:21
+msgctxt "Post Type Singular Name"
+msgid "Event"
+msgstr "Evento"
+
+#: events.php:22
+msgid "Events"
+msgstr "Eventos"
+
+#: events.php:23 events.php:49
+msgid "Event"
+msgstr "Evento"
+
+#: events.php:24
+msgid "Items archives"
+msgstr "Archivo de eventos"
+
+#: events.php:25
+msgid "Item Attributes"
+msgstr "Atributos del evento"
+
+#: events.php:26
+msgid "Parent Item:"
+msgstr "Evento padre:"
+
+#: events.php:27
+msgid "All items"
+msgstr "Todos los eventos"
+
+#: events.php:28
+msgid "Add new item"
+msgstr "Añadir nuevo evento"
+
+#: events.php:29
+msgid "Add new"
+msgstr "Añadir nuevo"
+
+#: events.php:30
+msgid "New item"
+msgstr "Nuevo evento"
+
+#: events.php:31
+msgid "Edit item"
+msgstr "Editar evento"
+
+#: events.php:32
+msgid "Update item"
+msgstr "Actualizar evento"
+
+#: events.php:33
+msgid "View item"
+msgstr "Ver evento"
+
+#: events.php:34
+msgid "View items"
+msgstr "Ver eventos"
+
+#: events.php:35
+msgid "Search items"
+msgstr "Buscar eventos"
+
+#: events.php:36
+msgid "Not found"
+msgstr "No encontrado"
+
+#: events.php:37
+msgid "Not found in trash"
+msgstr "No encontrado en la papelera"
+
+#: events.php:38
+msgid "Featured image"
+msgstr "Imagen destacada"
+
+#: events.php:39
+msgid "Set featured image"
+msgstr "Establecer imagen destacada"
+
+#: events.php:40
+msgid "Remove featured image"
+msgstr "Eliminar la imagen destacada"
+
+#: events.php:41
+msgid "Use featured image"
+msgstr "Usar imagen destacada"
+
+#: events.php:42
+msgid "Insert in to item"
+msgstr "Insertar en evento"
+
+#: events.php:43
+msgid "Uploaded to this item"
+msgstr "Cargado a este evento"
+
+#: events.php:44
+msgid "Items list"
+msgstr "Lista de eventos"
+
+#: events.php:45
+msgid "Items list navigation"
+msgstr "Navegación de lista de eventos"
+
+#: events.php:46
+msgid "Filter items list"
+msgstr "Filtrar lista de eventos"
+
+#: events.php:50
+msgid "To manage events"
+msgstr "Para administrar eventos"
+
+#: events.php:81
+msgid "Event information"
+msgstr "Información del evento"
+
+#: events.php:89
+msgid "End date "
+msgstr "Fecha de finalización "
+
+#: events.php:92
+msgid "End date for the event."
+msgstr "Fecha de fin del evento."
+
+#: vc_elements/evento-shortcode.php:23
+msgid "KNX Events"
+msgstr "Administración de Eventos"
+
+#: vc_elements/evento-shortcode.php:25
+msgid "Show current events."
+msgstr "Mostrar eventos vigentes."
+
+#: vc_elements/evento-shortcode.php:26
+msgid "KNX Elements"
+msgstr "KNX - Elements"
+
+#: vc_elements/evento-shortcode.php:33
+msgid "Columns"
+msgstr "Columnas"
+
+#: vc_elements/evento-shortcode.php:36
+msgid "2 columns"
+msgstr "2 columnas"
+
+#: vc_elements/evento-shortcode.php:37
+msgid "3 columns"
+msgstr "3 columnas"
+
+#: vc_elements/evento-shortcode.php:38
+msgid "4 columns"
+msgstr "4 columnas"
+
+#: vc_elements/evento-shortcode.php:46
+msgid "Number of events"
+msgstr "Número de eventos"
+
+#: vc_elements/evento-shortcode.php:49
+msgid "How many events you will show?"
+msgstr "¿Cuántos eventos desea mostrar?"
+
+#: vc_elements/evento-view.php:13
+msgid "View event"
+msgstr "Ver evento"
+
+#. Plugin Name of the plugin/theme
+msgid "WP Events manager"
+msgstr "Administrador de eventos"
+
+#. Plugin URI of the plugin/theme
+msgid "http://kinexo.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Managing events has never been so easy!"
+msgstr "Administrar eventos nunca fue tan sencillo!"
+
+#. Author of the plugin/theme
+msgid "Mayco Barale"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.linkedin.com/in/mayco-barale-2563815a/"
+msgstr ""
+
+#~ msgid "KNX - Events"
+#~ msgstr "KNX - Eventos"

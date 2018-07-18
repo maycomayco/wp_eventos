@@ -20,22 +20,22 @@ class vcEventos extends WPBakeryShortCode {
 		// Map the block with vc_map()
 		vc_map(
 			array(
-				'name' => __('Eventos - KNX', 'knx-eventos'),
+				'name' => __('KNX Events', 'knx-events'),
 				'base' => 'vc_eventos',	//igual al usado en el constructor
-				'description' => __('Mostrar eventos vigentes', 'knx-eventos'),
-				'category' => __('KNX Elementos', 'knx-eventos'),
+				'description' => __('Show current events.', 'knx-events'),
+				'category' => __('KNX Elements', 'knx-events'),
 				// 'icon' => 'vc-icon',
 				'icon' => 'dashicons-calendar',
 				'params' => array(
 					array(
 						"type" => "dropdown",
 						"class" => "",
-						"heading" => __( "Columnas", "knx-eventos" ),
+						"heading" => __( "Columns", "knx-events" ),
 						"param_name" => "grid_columns",
 						"value"       => array(
-							'2 Columns'  	=> '2',
-							'3 Columns'		=> '3',
-							'4 Columns'  	=> '4',
+							__( "2 columns", "knx-events" )	=> '2',
+							__( "3 columns", "knx-events" )	=> '3',
+							__( "4 columns", "knx-events" )	=> '4',
 						),
 						"std"         => '3',
 					),
@@ -43,10 +43,10 @@ class vcEventos extends WPBakeryShortCode {
 						"type" => "textfield",
 						"holder" => "div",
 						"class" => "",
-						"heading" => __( "Numero de eventos", "knx-eventos" ),
+						"heading" => __( "Number of events", "knx-events" ),
 						"param_name" => "event_posts_pro",
-						"value" => __( "", "pro-elements" ),
-						"description" => __( "Cuantos eventos usted desea mostrar?", "knx-eventos" ),
+						// "value" => __( "", "pro-elements" ),
+						"description" => __( "How many events you will show?", "knx-events" ),
 					),
 				)
 			)
@@ -71,24 +71,11 @@ class vcEventos extends WPBakeryShortCode {
 				$arrayIds = explode(', ', $postIds); // explode ids with space after comma's
 			}
 		}
-		// WP_Query arguments
-		// $args = array(
-		// 	'post_type'              => array( 'event' ),
-		// 	'post_status'            => array( 'publish' ),
-		// 	'posts_per_page'         => $event_posts_pro,
-		// 	'meta_query'             => array(
-		// 		array(
-		// 			'key'     => 'wpcf-fecha-de-vencimiento',	//esto registra la hora tambien.
-		// 			'value'   => date( "U" ),
-		// 			'compare' => '>',	//la comparacion es por el dia directamente.
-		// 		),
-		// 	),
-		// );
 		// The Query
 		$carousel_query  = new WP_Query(
 			array(
 				'post_type'      => 'evento',
-				// 'post_status'    => 'publish',
+				'post_status'    => 'publish',
 				'posts_per_page' => $event_posts_pro,
 				'orderby'        => 'menu_order _knx-evento_fecha_evento title',	// 3 tipos de orden admite order, fecha y titulo
 				'order'          => 'ASC',
@@ -101,14 +88,14 @@ class vcEventos extends WPBakeryShortCode {
 		$count = 1; 
 		$count_2 = 1;
 		if ($grid_columns == 3) {	// identifico la clase de Visual Composer a utilizar
-				$columns = 'vc_col-md-4 vc_col-lg-4 ';
+			$columns = 'vc_col-md-4 vc_col-lg-4 ';
+		} else {
+			if ($grid_columns == 4) {
+				$columns = 'vc_col-md-3 vc_col-lg-3 ';
 			} else {
-				if ($grid_columns == 4) {
- 				$columns = 'vc_col-md-3 vc_col-lg-3 ';
-				} else {
- 				$columns = 'vc_col-md-6 vc_col-lg-6 ';
-				}		
-			}
+				$columns = 'vc_col-md-6 vc_col-lg-6 ';
+			}		
+		}
 		ob_start();	?>
 		
 		<div class="knx_list">
@@ -116,21 +103,21 @@ class vcEventos extends WPBakeryShortCode {
 			$count = 1;
 			$col_count_progression = $grid_columns;
 			while ($carousel_query->have_posts()) : $carousel_query->the_post(); ?>
-				<div class="knx_item <?php echo $columns; ?>">
-						<?php include('evento-view.php'); ?>
-				</div>
-				<?php
-				if ($count == $grid_columns) { echo '<div class="knx_clearfix"></div>'; $count = 0;};
+			<div class="knx_item <?php echo $columns; ?>">
+				<?php include('evento-view.php'); ?>
+			</div>
+			<?php
+			if ($count == $grid_columns) { echo '<div class="knx_clearfix"></div>'; $count = 0;};
 				// } end del if que agregue yo
-				?>
+			?>
 			<?php  $count ++; endwhile ; ?>
 			<div class="knx_clearfix"></div>
 			<?php wp_reset_query(); ?>
 		</div>
 		<?php
-			return '</div><!-- close .event-container-pro --><div class="knx_clearfix"></div>' . $output_pro. ob_get_clean();
-		}
+		return '</div><!-- close .event-container-pro --><div class="knx_clearfix"></div>' . $output_pro. ob_get_clean();
+	}
 	} // End Element Class
 
 // Element Class Init
-new vcEventos();
+	new vcEventos();
