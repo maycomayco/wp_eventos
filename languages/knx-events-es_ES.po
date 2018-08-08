@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KNX - Events\n"
-"POT-Creation-Date: 2018-07-18 15:37-0300\n"
-"PO-Revision-Date: 2018-07-18 15:38-0300\n"
+"POT-Creation-Date: 2018-08-08 10:43-0300\n"
+"PO-Revision-Date: 2018-08-08 10:44-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: events.php\n"
@@ -147,15 +147,15 @@ msgstr "Fecha de finalización"
 msgid "End date for the event."
 msgstr "Fecha de fin del evento."
 
-#: events.php:115
+#: events.php:102
 msgid "Title"
 msgstr "Titulo"
 
-#: events.php:116
+#: events.php:103
 msgid "End Date"
 msgstr "Fecha de finalización"
 
-#: events.php:117
+#: events.php:104
 msgid "Date"
 msgstr "Fecha"
 
@@ -195,7 +195,11 @@ msgstr "Número de eventos"
 msgid "How many events you will show?"
 msgstr "¿Cuántos eventos desea mostrar?"
 
-#: vc_elements/evento-view.php:13
+#: vc_elements/evento-view.php:11
+msgid "Event date: "
+msgstr "Fecha del evento: "
+
+#: vc_elements/evento-view.php:16
 msgid "View event"
 msgstr "Ver evento"
 
