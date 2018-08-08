@@ -7,9 +7,12 @@
         <?php endif;?>
         <div class="knx_item_content">
             <h4 class="knx_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                <div class='knx_item_excerpt'>
-                    <?php the_excerpt(); ?>
-                </div>
+            <div class="knx_item_meta-data">
+                <p><?php _e('Event date: ', 'knx-events');  echo gmdate('d/m/Y', get_post_meta( get_the_ID(), '_knx-evento_fecha_evento', true )); ?></p>
+            </div>
+            <div class='knx_item_excerpt'>
+                <?php the_excerpt(); ?>
+            </div>
             <a href="<?php the_permalink();?>" class="vc_btn vc_general vc_gitem-link knx_btn"><?php _e( 'View event', 'knx-events' ) ?></a>
         </div>
         <div class="knx_clearfix"></div>
